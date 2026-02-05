@@ -1,2 +1,41 @@
 Please add your pseudocode to this file
 And a written explanation of your solution
+
+Goal:
+If given a string
+    return all consecutive substrings within that string
+    return in the order they appear
+
+Pseudocode:
+
+Function consecutiveSubstrings(string)
+    create empty list called result
+
+    for each index start from 0 to length of string -1
+        for each index end from start + 1 to length of string
+            create substring by slicing string from start to end
+            add string to result
+        end for loop
+    end for loop
+
+    return result
+end the function
+
+1. Determine which aspect is scalable by looking into variables, and 
+
+2. Determine how that scalable element changes the code.
+If the scalable element increases, how does that change the code?
+Look into looping elements.
+
+The scalable element is the length of the string that is input into the function
+so n = length of the string
+The string can be a single character or a million, so the input size is what scales
+
+The larger n is the more times the outer loop runs.
+The more the outer loop runs the more the inner loops runs as well
+So the more n grows the more the loops will run
+This creates quadratic growth so O(n^2)
+
+
+
+        
